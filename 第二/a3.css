@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(./元气壁纸_1709471464371.png); /* 页面背景 */
+    overflow-x: hidden;
+    background-size: cover;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: lightblue;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+    transition: top 0.3s;
+    z-index: 10;
+}
+
+.nav-link {
+    margin-left: 40px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.container {
+    display: flex;
+    padding: 70px 20px 20px 20px;
+    position: relative;
+}
+
+.fixed-rectangle {
+    position: fixed;
+    width: 512px;
+    height: 350px;
+    background-color: aliceblue;
+    left: 40px;
+    z-index: 7;
+    top: 100px;
+    background-size: cover;
+}
+
+.fixed-rectangle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-button {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 8;
+}
+
+.content {
+    margin-left: 600px;
+    width: 600px;
+    z-index: 6;
+    overflow-y: auto;
+    height: calc(100vh - 70px);
+    padding-right: 20px;
+}
+
+.article-box {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0.5; /* 初始状态为半透明 */
+    transition: opacity 0.3s ease;
+}
+
+.article-box.opened {
+    opacity: 1; /* 展开时完全不透明 */
+}
+
+.article-title {
+    margin: 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.article-content {
+    display: none; /* 初始状态下隐藏文章内容 */
+    padding-top: 10px;
+}
